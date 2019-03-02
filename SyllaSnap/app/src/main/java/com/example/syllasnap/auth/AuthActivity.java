@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.syllasnap.MainActivity;
 import com.example.syllasnap.R;
 import com.example.syllasnap.calendar.CalendarManager;
 import com.example.syllasnap.test_activities.MaraTestActivity;
@@ -24,8 +25,6 @@ public class AuthActivity extends AppCompatActivity {
     private static final int REQUEST_AUTHORIZATION = 1;
     private static final int REQUEST_ACCOUNT_PICKER = 2;
 
-    private final HttpTransport m_transport = AndroidHttp.newCompatibleTransport();
-    private final JsonFactory m_jsonFactory = GsonFactory.getDefaultInstance();
     GoogleAccountCredential credential;
 
     @Override
@@ -56,7 +55,8 @@ public class AuthActivity extends AppCompatActivity {
                     if (accountName != null) {
                         credential.setSelectedAccountName(accountName);
                         CalendarManager.getInstance().setCredentials(credential);
-                        startActivity(new Intent(AuthActivity.this, MaraTestActivity.class));
+                        Intent mainIntent = new Intent(AuthActivity.this, MainActivity.class);
+                        startActivity(mainIntent);
                     }
                 }
                 // call method to start accessing Google Drive

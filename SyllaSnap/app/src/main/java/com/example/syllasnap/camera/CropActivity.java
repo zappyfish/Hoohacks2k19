@@ -4,6 +4,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,15 +15,28 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 public class CropActivity extends AppCompatActivity {
 
     private static final String FILENAME = "syllabus.png";
+    private CropImageView mCropView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crop);
 
-        CropImageView cropView = (CropImageView)findViewById(R.id.cropImageView);
-        cropView.setImageBitmap(BitmapHolder.mBitmap);
-        cropView.invalidate();
+        mCropView = (CropImageView)findViewById(R.id.cropImageView);
+        mCropView.setImageBitmap(BitmapHolder.mBitmap);
+        mCropView.invalidate();
 
+        initUploadButton();
+    }
+
+    private void initUploadButton() {
+        Button button = (Button)findViewById(R.id.cropImageView);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bitmap cropped = mCropView.getCroppedImage();
+                // Send it up to to the cloud now for OCR.
+            }
+        });
     }
 }

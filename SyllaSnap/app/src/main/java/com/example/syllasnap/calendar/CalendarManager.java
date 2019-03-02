@@ -1,7 +1,7 @@
 package com.example.syllasnap.calendar;
 
+import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.syllasnap.data.SyllabusEvent;
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -10,11 +10,7 @@ import com.google.api.client.http.HttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.calendar.Calendar;
-import com.google.api.services.calendar.model.CalendarList;
-import com.google.api.services.calendar.model.CalendarListEntry;
-
-import java.io.IOException;
-import java.util.List;
+import com.google.api.services.calendar.model.Event;
 
 public class CalendarManager {
 
@@ -57,6 +53,8 @@ public class CalendarManager {
         return calendar;
     }
 
+
+
 //    public boolean calendarPermission(String calendarId) {
 //
 //
@@ -86,22 +84,44 @@ public class CalendarManager {
 //    }
 
 
-    public void uploadEventToCalendar(SyllabusEvent event) {
+    public void uploadEventToCalendar(final SyllabusEvent event) {
         // TODO: look at SyllabusEvent class. You will probably have to use the method:
         if (mCalendar != null) {
             // event.getCalendarEvent()
 
-            String calendarId = "primary";  // CHANGE THIS LATER!!!! to primary
+            final String calendarId = "primary";  // CHANGE THIS LATER!!!! to primary
             // boolean permission = calendarPermission(calendarId);
 //            boolean permission = true;
             // Iterate through entries to make sure person has access to calendar
 
-            try {
-                    mCalendar.events().insert(calendarId, event.getCalendarEvent()).execute();
-                } catch (Exception e) {
-                    Log.d("calendar upload", e.toString());
-            }
+            CalendarRequest request = new CalendarRequest();
+            request.calendar = mCalendar;
+            request.calendarId = calendarId;
+            request.event = event.getCalendarEvent();
 
+            CalendarTask uploadTask = new CalendarTask();
+            uploadTask.execute(request);
+        }
+    }
+
+    private static class CalendarRequest {
+        private Calendar calendar;
+        private String calendarId;
+        private Event event;
+
+        private CalendarRequest() {}
+    }
+
+    private static class CalendarTask extends AsyncTask<CalendarRequest, Void, Void> {
+        @Override
+        protected Void doInBackground(CalendarRequest... params) {
+            try {
+                CalendarRequest request = params[0];
+                request.calendar.events().insert(request.calendarId, request.event).execute();
+            } catch (Exception e) {
+                Log.d("calendar upload", e.toString());
+            }
+            return null;
         }
 
     }

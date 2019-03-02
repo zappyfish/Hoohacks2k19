@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         // startActivity(new Intent(MainActivity.this, AuthActivity.class));
     }
 
+
     private void setUpTestActivityButton(int btnId, final Intent startIntent) {
         Button button = (Button) findViewById(btnId);
         button.setOnClickListener(new View.OnClickListener() {
