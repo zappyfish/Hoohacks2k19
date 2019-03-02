@@ -13,7 +13,7 @@ public class OCRManager {
 
     }
 
-    public static OCRManager getInstance() {
+    public static synchronized OCRManager getInstance() {
         if (sInstance == null) {
             sInstance = new OCRManager();
         }
