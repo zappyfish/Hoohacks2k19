@@ -91,9 +91,9 @@ public class CalendarManager {
         if (mCalendar != null) {
             // event.getCalendarEvent()
 
-            String calendarId = "test";  // CHANGE THIS LATER!!!! to primary
+            String calendarId = "primary";  // CHANGE THIS LATER!!!! to primary
             // boolean permission = calendarPermission(calendarId);
-            boolean permission = true;
+//            boolean permission = true;
             // Iterate through entries to make sure person has access to calendar
 
             try {
