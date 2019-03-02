@@ -11,7 +11,7 @@ public class CalendarManager {
 
     }
 
-    public static CalendarManager getInstance() {
+    public static synchronized CalendarManager getInstance() {
         if (sInstance == null) {
             sInstance = new CalendarManager();
         }
