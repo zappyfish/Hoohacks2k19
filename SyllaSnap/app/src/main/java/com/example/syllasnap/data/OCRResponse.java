@@ -15,6 +15,10 @@ public class OCRResponse {
         return mOCRDataList.get(pos);
     }
 
+    public void addData(OCRData data) {
+        mOCRDataList.add(data);
+    }
+
     public int getNumData() {
         return mOCRDataList.size();
     }
