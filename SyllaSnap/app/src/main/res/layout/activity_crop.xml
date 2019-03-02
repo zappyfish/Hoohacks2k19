@@ -5,16 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/crop_background"
     tools:context=".camera.CropActivity">
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Please try to crop around syllabus dates"
-        android:textSize="20dp"
-        android:layout_marginTop="5dp"
-        android:textColor="#000000"
-        android:layout_gravity="center_horizontal"/>
+
 
     <com.theartofdev.edmodo.cropper.CropImageView
         xmlns:custom="http://schemas.android.com/apk/res-auto"
@@ -22,14 +15,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"/>
-    
+
     <Button
+        android:id="@+id/crop_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/crop_upload"
         android:layout_gravity="center_horizontal"
-        android:text="Analyze Syllabus"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="5dp"/>
+        android:text="Analyze Syllabus" />
 
 </LinearLayout>
