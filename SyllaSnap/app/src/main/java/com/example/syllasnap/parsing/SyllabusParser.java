@@ -1,5 +1,6 @@
 package com.example.syllasnap.parsing;
 
+import com.example.syllasnap.data.OCRResponse;
 import com.example.syllasnap.data.SyllabusDate;
 import com.example.syllasnap.data.SyllabusEvent;
 
@@ -12,7 +13,7 @@ public class SyllabusParser {
 
     }
 
-    public List<SyllabusEvent> getSyllabusEvents(String OCRDataString) {
+    public List<SyllabusEvent> getSyllabusEvents(OCRResponse ocrResponse) {
         List<SyllabusEvent> syllabusEvents = new LinkedList<>();
         // TODO: Complete me (Angel)
         // Useful links:
