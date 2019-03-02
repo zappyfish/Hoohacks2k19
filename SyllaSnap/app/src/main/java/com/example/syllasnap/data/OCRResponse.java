@@ -11,7 +11,11 @@ public class OCRResponse {
         mOCRDataList = new ArrayList<>();
     }
 
-    public OCRData getText(int pos) {
+    public OCRData getData(int pos) {
         return mOCRDataList.get(pos);
+    }
+
+    public int getNumData() {
+        return mOCRDataList.size();
     }
 }
