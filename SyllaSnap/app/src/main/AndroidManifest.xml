@@ -7,6 +7,7 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,9 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".auth.AuthActivity"
+            android:label="@string/title_activity_auth"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".test_activities.AngelTestActivity"
             android:label="@string/title_activity_angel_test"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".test_activities.AnnaTestActivity"
             android:label="@string/title_activity_anna_test"
@@ -26,7 +31,13 @@
             android:name=".test_activities.MaraTestActivity"
             android:label="@string/title_activity_mara_test"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".camera.CameraActivity"
+            android:label="CameraActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
