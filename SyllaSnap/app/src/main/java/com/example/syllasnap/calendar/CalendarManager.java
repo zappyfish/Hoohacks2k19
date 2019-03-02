@@ -27,26 +27,26 @@ public class CalendarManager {
         // TODO: look at SyllabusEvent class. You will probably have to use the method:
         // event.getCalendarEvent()
 
-        String calenderId = "test";  // CHANGE THIS LATER!!!! to primary
-
-        // Iterate through entries to make sure person has access to calendar
-        boolean permission = false;
-        string pageToken = null;
-        do {
-            CalendarList calendarList = service.calendarList().list().setPageToken(pageToken).execute();
-            List<CalendarListEntry> items = calendarList.getItems();
-
-            for (CalendarListEntry calendarListEntry : items) {
-                if (calendarListEntry.getSummary().equals(calendarId)) {
-                    permission = true;
-                }
-            }
-        } while (pageToken != null && permission == false);
-
-        if (permission = true) {
-            event = service.events().insert(calendarId, event).execute();
-            System.out.printf("Event created: %s\n", event.getHtmlLink());
-        }
+//        String calenderId = "test";  // CHANGE THIS LATER!!!! to primary
+//
+//        // Iterate through entries to make sure person has access to calendar
+//        boolean permission = false;
+//        string pageToken = null;
+//        do {
+//            CalendarList calendarList = service.calendarList().list().setPageToken(pageToken).execute();
+//            List<CalendarListEntry> items = calendarList.getItems();
+//
+//            for (CalendarListEntry calendarListEntry : items) {
+//                if (calendarListEntry.getSummary().equals(calendarId)) {
+//                    permission = true;
+//                }
+//            }
+//        } while (pageToken != null && permission == false);
+//
+//        if (permission = true) {
+//            event = service.events().insert(calendarId, event).execute();
+//            System.out.printf("Event created: %s\n", event.getHtmlLink());
+//        }
 
 
 

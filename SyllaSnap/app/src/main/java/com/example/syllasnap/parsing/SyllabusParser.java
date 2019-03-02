@@ -42,7 +42,6 @@ public class SyllabusParser {
         months.add("Nov"); months.add("November");
         months.add("Dec"); months.add("December");
 
-        for (String str : ocrResponse.getData() )
 
         String eventName = "testEventName";
         int year = 2019;

@@ -2,6 +2,9 @@ package com.example.syllasnap.data;
 
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.EventDateTime;
+import com.google.api.services.calendar.model.EventReminder;
+
+import java.util.Arrays;
 
 public class SyllabusEvent {
 
@@ -10,7 +13,6 @@ public class SyllabusEvent {
     private final String mStart;
 
     public SyllabusEvent(String name, SyllabusDate start, SyllabusDate end) {
-        this.mCalendarEvent = createCalendarEvent(name, start.getEventDateTime(), end.getEventDateTime());
         mCalendarEvent = createCalendarEvent(name, start.getEventDateTime(), end.getEventDateTime());
         mName = name;
         mStart = start.toString();
