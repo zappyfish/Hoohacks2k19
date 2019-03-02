@@ -26,7 +26,11 @@
             android:name=".test_activities.MaraTestActivity"
             android:label="@string/title_activity_mara_test"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".camera.CameraActivity"
+            android:label="CameraActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
