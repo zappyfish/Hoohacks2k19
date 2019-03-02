@@ -1,0 +1,471 @@
+"Supplemental Book Chapters
+Supplemental Book Chapters
+Assignments
+Due Dates:
+Videos
+ISBN-13: 978-0-13-608620-8
+ISBN-13: 978-0-13-397077-7
+Due Midnight AoE:
+August 28th, 2016
+Uda
+Timings
+Initial Survey (2.5%)
+ISBN-10: 0-13-608620-9
+ISBN-10: 0-13-397077-9
+Group Project Posted
+Friday, September 02, 2016
+Updated: 8/25/2016 7:02 PM
+(hr.min:sec)
+Course Overview
+0:01:41
+Ch1: Intro DB and Users
+Ch2: Architecture DBMS
+Ch7.1: DB Design Requirements Analysis Ch3.1: DB Design Requirements Analysis Methodology l ANALYSIS
+Ch7: Entity Relational Model (ER)
+Ch8: Extended ER Model (EER)
+Ch1: Intro DB and Users
+Ch2: Architecture DBMS
+Fundamentals of Databases
+0:45:45
+Due Midnight AoE:
+September Sth-11t
+(Check End of Week
+Ch3: Entity Relational Model (ER)
+Extended-Entity Relationship Model
+0:42:15
+Ch4: Enhanced ER Model (EER)
+Due Midnight AoE:
+September 18th, 2016
+Project Phase I
+(12.5%)
+Deliverables: ifd.pdf, eer.pdf, report.pdf
+Ch3: Design Modeling using Constraints Ch5: Design Modeling using Constraints Methodology Il: SPECIFICATION
+0:27:31
+0:50:09
+0:20:49
+Due Midnight AoE:
+Ch6: Relational Alg/Calc
+Ch9: EER-to-Relational Mapping
+Relational Algebra and Calculus
+EER Relational Mapping
+Methodology II: DESIGN
+Ch8: Relational Alg/Calc
+October 6th-9th, 2016
+(Check End of Week
+Exam 2
+(12.5%)
+Ch9: EER-to-Relational Mapping
+Due Midnight AoE:
+October 16th, 2016
+Deliverables: eer2rel.pdf, sql.pdf, report.pdf, task.pdf
+Project Phase II
+(12.5%)
+Ch4: Basic SQL
+Ch6: Basic SQL
+0:39:26
+Due Midnight AoE:
+November 10th-13th, 2016
+(Check End of Week
+Exam 3
+(12.5%)
+Ch5: Adv SQL Statements
+Ch7: Adv SQL Statements
+Methodology IIl: Design (SQL Statements)
+0:17:03
+Due Midnight AoE:
+November 20th, 2016
+Project Phase III (12.5%)
+Deliverables: GitHub Project code
+Ch15: Normalization
+Normalization
+0:31:34
+Ch14: Normalization
+Ch15.1-2: DB Design Algorithms (partial)
+Ch16: DB Storage/File Structures
+Ch17: Index Structures
+Ch10: SQL Programming
+Ch11 Programming Using PHP
+Ch16: DB Design Algorithms (partial)
+Efficiency
+0:46:37
+Due Midnight AoE:
+December 8th-11th, 2016 Ch17: DB Storage/File Structures
+Exam 4
+(12.5%)
+Check End of Week h18 Index
+res
+Metadata
+0:11:24
+Ch13: SQL Programming
+Methodology IV: IMPLEMENTATION
+0:22:29
+Ch14: Programming Using PHP
+Team Assessment (10%)
+Project Demos
+Notice: AoE standard time. Please make sure you set your T-Square time zone to your own, so that there is no confusion about due dates/times
+November 28th-30th, 2016
+Deliverables: Oral Presentation
+"10,16,1070,803
+"Supplemental"327,16,420,28
+"Book"426,16,460,25
+"Chapters"466,16,528,28
+"Supplemental"546,16,639,28
+"Book"645,16,679,25
+"Chapters"685,16,747,28
+"Assignments"38,25,126,37
+"Due"202,25,227,34
+"Dates:"234,25,276,34
+"Videos"851,25,897,35
+"ISBN-13:"359,52,399,60
+"978-0-13-608620-8"403,52,497,60
+"ISBN-13:"578,52,618,60
+"978-0-13-397077-7"622,52,715,60
+"Due"190,55,209,63
+"Midnight"214,55,261,65
+"AoE:"264,55,288,63
+"August"192,68,231,78
+"28th,"235,69,260,77
+"2016"265,69,287,77
+"Uda"1017,56,1037,66
+"Timings"1016,74,1059,84
+"Initial"10,62,37,69
+"Survey"42,62,78,71
+"("83,62,85,71
+"2.5"86,62,100,69
+"%"101,62,109,69
+")"111,62,113,71
+"ISBN-10:"370,87,410,94
+"0-13-608620-9"414,87,485,94
+"ISBN-10:"589,87,629,94
+"0-13-397077-9"633,87,704,94
+"Group"10,93,42,102
+"Project"47,93,85,102
+"Posted"89,93,126,100
+"Friday,"167,93,201,102
+"September"206,93,267,102
+"02,"270,93,284,102
+"2016"288,93,311,100
+"Updated:"800,92,848,102
+"8/25/2016"852,92,906,100
+"7:02"910,92,933,100
+"PM"938,92,954,100
+"(hr.min:sec)"1004,91,1070,103
+"Course"756,118,795,126
+"Overview"799,118,851,126
+"0:01:41"1020,118,1054,127
+"Ch1:"319,119,341,126
+"Intro"346,119,365,126
+"DB"369,119,382,126
+"and"386,119,403,126
+"Users"408,119,435,126
+"Ch2:"319,145,340,152
+"Architecture"345,145,404,152
+"DBMS"408,145,436,152
+"Ch7.1:"319,170,350,181
+"DB"353,170,366,181
+"Design"371,170,402,181
+"Requirements"407,170,471,181
+"Analysis"476,170,515,181
+"Ch3.1:"526,170,574,181
+"DB"576,170,589,181
+"Design"595,170,626,181
+"Requirements"631,170,694,181
+"Analysis"700,170,739,181
+"Methodology"748,170,823,181
+"l"829,170,831,181
+"ANALYSIS"837,170,892,181
+"Ch7:"319,197,341,205
+"Entity"345,197,370,207
+"Relational"375,197,420,205
+"Model"424,197,451,205
+"(ER)"455,197,474,206
+"Ch8:"319,223,341,231
+"Extended"345,223,389,231
+"ER"393,223,405,231
+"Model"409,223,437,231
+"(EER)"440,223,466,232
+"Ch1:"543,119,565,126
+"Intro"570,119,589,126
+"DB"593,119,606,126
+"and"610,119,627,126
+"Users"632,119,659,126
+"Ch2:"543,145,564,152
+"Architecture"569,145,628,152
+"DBMS"632,145,660,152
+"Fundamentals"756,144,834,152
+"of"838,144,849,152
+"Databases"853,144,912,152
+"0:45:45"1018,142,1057,153
+"Due"190,149,209,156
+"Midnight"214,149,261,158
+"AoE:"264,149,287,156
+"September"171,162,231,172
+"Sth-11t"234,162,271,171
+"(Check"185,177,222,186
+"End"227,177,245,184
+"of"249,177,260,184
+"Week"263,177,293,184
+"Ch3:"543,197,565,205
+"Entity"569,197,594,207
+"Relational"599,197,644,205
+"Model"648,197,675,205
+"(ER)"679,197,698,206
+"Extended-Entity"756,209,842,219
+"Relationship"846,209,915,219
+"Model"919,209,952,217
+"0:42:15"1020,209,1054,217
+"Ch4:"543,223,565,231
+"Enhanced"569,223,616,231
+"ER"620,223,632,231
+"Model"636,223,663,231
+"(EER)"667,223,693,232
+"Due"191,254,210,261
+"Midnight"215,254,262,263
+"AoE:"265,254,288,261
+"September"182,268,242,277
+"18th,"246,268,270,277
+"2016"274,268,297,275
+"Project"10,260,50,271
+"Phase"54,260,88,269
+"I"92,260,94,268
+"("104,260,108,270
+"12.5"109,260,131,270
+"%"132,260,138,270
+")"139,260,145,270
+"Deliverables:"543,260,633,269
+"ifd.pdf,"640,260,686,272
+"eer.pdf,"692,260,745,272
+"report.pdf"752,260,822,272
+"Ch3:"319,298,342,309
+"Design"345,298,376,309
+"Modeling"381,298,420,309
+"using"425,298,448,309
+"Constraints"455,298,507,309
+"Ch5:"518,298,563,309
+"Design"568,298,600,309
+"Modeling"605,298,644,309
+"using"649,298,672,309
+"Constraints"679,298,731,309
+"Methodology"742,298,824,309
+"Il:"829,298,838,309
+"SPECIFICATION"841,298,924,309
+"0:27:31"1020,298,1052,306
+"0:50:09"1018,324,1057,332
+"0:20:49"1018,349,1057,358
+"Due"190,316,209,323
+"Midnight"214,316,261,325
+"AoE:"264,316,287,323
+"Ch6:"314,325,336,339
+"Relational"337,324,386,334
+"Alg/Calc"387,325,433,336
+"Ch9:"319,351,341,359
+"EER-to-Relational"345,351,427,359
+"Mapping"431,351,469,361
+"Relational"756,324,810,332
+"Algebra"814,324,857,334
+"and"861,324,880,332
+"Calculus"885,324,933,332
+"EER"756,350,776,359
+"Relational"780,350,835,359
+"Mapping"839,350,886,360
+"Methodology"757,376,825,387
+"II:"828,376,841,387
+"DESIGN"844,376,884,387
+"Ch8:"543,325,565,332
+"Relational"570,325,615,332
+"Alg/Calc"618,325,658,334
+"October"182,329,225,339
+"6th-9th,"228,329,268,340
+"2016"272,330,295,339
+"(Check"185,344,222,353
+"End"227,344,245,351
+"of"249,344,260,351
+"Week"263,344,293,351
+"Exam"10,336,45,345
+"2"51,336,57,345
+"("70,336,75,348
+"12.5"76,336,102,348
+"%"103,336,112,345
+")"114,336,117,348
+"Ch9:"543,351,565,359
+"EER-to-Relational"569,351,651,359
+"Mapping"655,351,693,361
+"Due"191,407,210,414
+"Midnight"215,407,262,416
+"AoE:"265,407,288,414
+"October"190,421,233,428
+"16th,"237,421,261,430
+"2016"265,421,288,428
+"Deliverables:"543,413,633,422
+"eer2rel.pdf,"639,413,719,425
+"sql.pdf,"726,413,775,425
+"report.pdf,"782,413,854,425
+"task.pdf"860,413,915,425
+"Project"10,414,49,424
+"Phase"54,414,88,422
+"II"92,414,97,422
+"("107,414,111,424
+"12.5"112,414,134,424
+"%"135,414,143,422
+")"144,414,147,424
+"Ch4:"319,452,341,459
+"Basic"345,451,371,459
+"SQL"375,452,395,460
+"Ch6:"543,452,565,459
+"Basic"569,451,595,459
+"SQL"599,452,619,460
+"0:39:26"1018,451,1057,459
+"Due"191,456,210,463
+"Midnight"215,456,262,465
+"AoE:"265,456,288,463
+"November"170,470,226,477
+"10th-13th,"230,470,281,479
+"2016"285,470,308,477
+"(Check"185,484,222,493
+"End"227,484,245,491
+"of"249,484,260,491
+"Week"263,484,293,491
+"Exam"10,476,45,485
+"3"50,476,57,485
+"("70,476,75,488
+"12.5"76,476,102,488
+"%"103,476,112,485
+")"114,476,117,488
+"Ch5:"319,478,340,485
+"Adv"345,478,364,485
+"SQL"369,478,388,485
+"Statements"393,478,446,485
+"Ch7:"543,478,565,485
+"Adv"569,478,588,485
+"SQL"593,478,612,485
+"Statements"617,478,670,485
+"Methodology"756,477,826,488
+"IIl:"830,477,853,486
+"Design"853,477,890,488
+"(SQL"892,477,924,486
+"Statements)"925,477,1001,488
+"0:17:03"1017,477,1057,486
+"Due"190,530,209,537
+"Midnight"214,530,261,539
+"AoE:"264,530,287,537
+"November"183,544,239,551
+"20th,"243,544,267,553
+"2016"271,544,294,551
+"Project"10,536,49,546
+"Phase"54,536,88,544
+"III"92,536,100,544
+"("107,536,111,546
+"12.5"112,536,134,546
+"%"135,536,143,544
+")"144,536,147,546
+"Deliverables:"543,536,633,545
+"GitHub"639,536,686,545
+"Project"692,536,740,548
+"code"745,536,778,545
+"Ch15:"319,570,347,577
+"Normalization"352,570,414,577
+"Normalization"756,569,832,577
+"0:31:34"1018,569,1058,577
+"Ch14:"543,570,571,577
+"Normalization"576,570,638,577
+"Ch15.1-2:"543,596,590,604
+"DB"594,596,607,604
+"Design"611,596,643,605
+"Algorithms"647,596,697,605
+"(partial)"701,596,737,605
+"Ch16:"543,622,571,630
+"DB"575,622,588,630
+"Storage/File"593,622,648,632
+"Structures"653,622,702,630
+"Ch17:"543,648,571,656
+"Index"576,648,600,656
+"Structures"605,648,655,656
+"Ch10:"543,674,571,682
+"SQL"575,674,595,682
+"Programming"599,675,660,685
+"Ch11"543,700,566,710
+"Programming"574,700,635,710
+"Using"640,700,665,710
+"PHP"670,700,688,710
+"Ch16:"319,596,347,604
+"DB"351,596,364,604
+"Design"368,596,400,606
+"Algorithms"404,596,454,606
+"(partial)"459,596,494,605
+"Efficiency"756,607,809,618
+"0:46:37"1018,605,1057,617
+"Due"191,613,210,620
+"Midnight"215,613,262,622
+"AoE:"265,613,288,620
+"December"173,623,227,638
+"8th-11th,"233,622,279,637
+"2016"283,622,303,636
+"Ch17:"314,620,348,635
+"DB"351,620,363,634
+"Storage/File"367,619,424,634
+"Structures"428,618,477,633
+"Exam"10,633,45,642
+"4"50,633,57,642
+"("70,633,75,645
+"12.5"76,633,102,645
+"%"103,633,112,642
+")"114,633,117,645
+"Check"186,636,220,651
+"End"225,638,244,652
+"of"249,639,258,652
+"Week"263,640,292,654
+"h18"302,642,343,657
+"Index"350,644,374,658
+"res"416,649,430,656
+"Metadata"757,646,807,655
+"0:11:24"1018,647,1057,656
+"Ch13:"319,674,349,682
+"SQL"354,674,371,682
+"Programming"375,675,436,685
+"Methodology"756,685,826,695
+"IV:"830,685,843,693
+"IMPLEMENTATION"847,685,947,693
+"0:22:29"1018,685,1057,693
+"Ch14:"319,700,347,707
+"Programming"352,700,412,709
+"Using"417,700,442,709
+"PHP"447,700,465,707
+"Team"10,727,40,735
+"Assessment"44,727,116,735
+"("119,727,122,737
+"10"124,727,136,735
+"%"137,727,143,737
+")"144,727,149,737
+"Project"10,756,49,767
+"Demos"54,756,92,766
+"Notice:"12,792,48,803
+"AoE"53,792,74,803
+"standard"79,792,126,803
+"time."131,792,157,803
+"Please"160,792,198,803
+"make"203,792,231,803
+"sure"238,792,260,803
+"you"265,792,283,803
+"set"288,792,303,803
+"your"308,792,328,803
+"T-Square"333,792,382,803
+"time"387,792,408,803
+"zone"414,792,437,803
+"to"442,792,450,803
+"your"457,792,477,803
+"own,"482,792,507,803
+"so"511,792,522,803
+"that"527,792,547,803
+"there"550,792,576,803
+"is"583,792,590,803
+"no"595,792,606,803
+"confusion"612,792,662,803
+"about"669,792,699,803
+"due"702,792,722,803
+"dates/times"727,792,788,803
+"November"170,758,226,765
+"28th-30th,"229,758,281,767
+"2016"285,758,308,765
+"Deliverables:"543,757,633,766
+"Oral"639,757,666,766
+"Presentation"673,757,761,766

@@ -1,0 +1,140 @@
+"Course Syllabus
+Home
+Modules
+People
+Collaborations
+Attendance
+Files
+My Media
+Media Gallery
+Outcomes
+Announcements
+Conferences
+Assignments
+Grades
+Discussions
+Course Summary:
+Date
+Details
+Tue Aug 4, 2015
+tGroup Appointments
+Wed Aug 5, 2015
+Test Review Questions
+Mon Mar 28, 2016
+Test Review Groups
+Thu Jul 14, 2016
+Test Review Appointments
+Fri Jul 22, 2016
+Ei Ethical Dilemmas in Nursing
+Sun Jul 31, 2016
+Eli Civil War Research Paper
+Sat Nov 19,2016
+Test Review Questions
+Quizzes
+Pages
+Chat
+Syllabus
+Thu Jan 12, 2017
+Lunch Appointments
+Ei API Text Entry 2
+Ei Test AP
+Google Drive
+Fri Mar 24, 2017
+"15,27,560,659
+"Course"184,27,259,45
+"Syllabus"268,27,355,48
+"Home"16,29,51,40
+"Modules"15,63,66,73
+"People"15,94,55,109
+"Collaborations"15,131,102,141
+"Attendance"15,165,84,175
+"Files"15,197,42,210
+"My"15,233,33,244
+"Media"38,232,75,244
+"Media"16,267,51,277
+"Gallery"56,267,99,278
+"Outcomes"15,301,77,311
+"Announcements"15,335,114,345
+"Conferences"15,369,90,379
+"Assignments"15,403,91,415
+"Grades"15,436,57,447
+"Discussions"15,471,85,480
+"Course"184,126,259,139
+"Summary:"268,126,375,142
+"Date"190,187,219,199
+"Details"359,186,400,197
+"Tue"190,223,210,233
+"Aug"215,223,238,235
+"4,"243,223,253,234
+"2015"258,223,289,233
+"tGroup"366,220,425,238
+"Appointments"433,220,515,238
+"Wed"190,270,217,280
+"Aug"222,270,245,282
+"5,"251,270,260,281
+"2015"265,270,296,280
+"Test"390,270,414,280
+"Review"419,270,462,280
+"Questions"467,270,529,282
+"Mon"190,317,216,327
+"Mar"221,317,245,327
+"28,"250,317,268,328
+"2016"273,317,304,327
+"Test"390,316,414,326
+"Review"419,316,462,326
+"Groups"466,316,510,328
+"Thu"190,364,212,374
+"Jul"216,364,232,374
+"14,"238,364,255,375
+"2016"260,364,292,374
+"Test"390,364,414,374
+"Review"419,364,462,374
+"Appointments"467,364,553,376
+"Fri"191,411,204,421
+"Jul"208,411,224,421
+"22,"229,411,247,421
+"2016"252,411,284,420
+"Ei"365,410,378,421
+"Ethical"390,410,429,420
+"Dilemmas"435,410,492,420
+"in"497,411,508,420
+"Nursing"514,410,560,423
+"Sun"190,458,211,468
+"Jul"216,458,232,468
+"31,"237,458,254,469
+"2016"259,458,291,468
+"Eli"366,458,378,470
+"Civil"386,458,416,470
+"War"419,458,444,470
+"Research"449,458,502,470
+"Paper"508,458,541,470
+"Sat"190,505,208,515
+"Nov"213,505,237,515
+"19,2016"242,505,296,515
+"Test"390,504,414,514
+"Review"419,504,462,514
+"Questions"466,504,528,514
+"Quizzes"15,507,62,517
+"Pages"15,539,50,553
+"Chat"15,573,42,583
+"Syllabus"15,606,64,619
+"Thu"190,552,212,562
+"Jan"216,552,236,562
+"12,"242,552,259,562
+"2017"264,552,295,562
+"Lunch"391,552,426,562
+"Appointments"430,552,517,564
+"Ei"366,598,379,610
+"API"390,598,410,608
+"Text"415,598,440,608
+"Entry"445,599,476,611
+"2"481,599,488,609
+"Ei"365,631,379,642
+"Test"386,631,413,642
+"AP"418,631,432,642
+"Google"15,644,57,653
+"Drive"62,644,94,651
+"Fri"190,648,203,657
+"Mar"209,648,233,658
+"24,"237,648,255,659
+"2017"260,648,292,658
