@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.syllasnap.HackyActivityGrabber;
 import com.example.syllasnap.R;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -21,6 +22,8 @@ public class CropActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crop);
+
+        HackyActivityGrabber.currentActivity = this;
 
         mCropView = (CropImageView)findViewById(R.id.cropImageView);
         mCropView.setImageBitmap(BitmapHolder.mBitmap);

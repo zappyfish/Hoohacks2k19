@@ -1,11 +1,14 @@
 package com.example.syllasnap.calendar;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.example.syllasnap.HackyActivityGrabber;
 import com.example.syllasnap.data.SyllabusEvent;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
+import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
@@ -13,6 +16,8 @@ import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.model.Event;
 
 public class CalendarManager {
+
+    private static final int REQUEST_AUTHORIZATION = 8;
 
     private static CalendarManager sInstance;
     private Calendar mCalendar;
@@ -84,7 +89,7 @@ public class CalendarManager {
 //    }
 
 
-    public void uploadEventToCalendar(final SyllabusEvent event) {
+    public void uploadEventToCalendar(SyllabusEvent event, Activity callingActivity) {
         // TODO: look at SyllabusEvent class. You will probably have to use the method:
         if (mCalendar != null) {
             // event.getCalendarEvent()
@@ -98,6 +103,7 @@ public class CalendarManager {
             request.calendar = mCalendar;
             request.calendarId = calendarId;
             request.event = event.getCalendarEvent();
+            request.callingActivity = callingActivity;
 
             CalendarTask uploadTask = new CalendarTask();
             uploadTask.execute(request);
@@ -108,6 +114,7 @@ public class CalendarManager {
         private Calendar calendar;
         private String calendarId;
         private Event event;
+        private Activity callingActivity;
 
         private CalendarRequest() {}
     }
@@ -115,10 +122,13 @@ public class CalendarManager {
     private static class CalendarTask extends AsyncTask<CalendarRequest, Void, Void> {
         @Override
         protected Void doInBackground(CalendarRequest... params) {
+            CalendarRequest request = params[0];
             try {
-                CalendarRequest request = params[0];
                 request.calendar.events().insert(request.calendarId, request.event).execute();
-            } catch (Exception e) {
+            } catch (UserRecoverableAuthIOException e) {
+                request.callingActivity.startActivityForResult(e.getIntent(), REQUEST_AUTHORIZATION);
+            }
+            catch (Exception e) {
                 Log.d("calendar upload", e.toString());
             }
             return null;
