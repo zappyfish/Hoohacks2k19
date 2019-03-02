@@ -33,7 +33,7 @@ public class CropActivity extends AppCompatActivity {
     }
 
     private void initUploadButton() {
-        Button button = (Button)findViewById(R.id.cropImageView);
+        Button button = (Button)findViewById(R.id.crop_upload);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
