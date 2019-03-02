@@ -15,5 +15,5 @@ public class AuthManager {
         return sInstance;
     }
 
-    
+
 }
