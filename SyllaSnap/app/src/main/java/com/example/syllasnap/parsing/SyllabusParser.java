@@ -185,7 +185,7 @@ public class SyllabusParser {
                     }
                 }
             } return syllabusEvents;
-        }
+     
     }
 
 

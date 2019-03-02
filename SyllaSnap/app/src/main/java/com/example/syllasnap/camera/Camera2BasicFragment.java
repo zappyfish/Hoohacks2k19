@@ -22,8 +22,11 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.Point;
@@ -44,11 +47,11 @@ import android.media.ImageReader;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.core.content.ContextCompat;
 import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
@@ -245,10 +248,40 @@ public class Camera2BasicFragment extends Fragment
 
         @Override
         public void onImageAvailable(ImageReader reader) {
-            mBackgroundHandler.post(new ImageSaver(reader.acquireNextImage(), mFile));
-        }
+            Image image = reader.acquireLatestImage();
+            ByteBuffer buffer = image.getPlanes()[0].getBuffer();
+            byte[] data = new byte[buffer.remaining()];
+            buffer.get(data);
+            Intent cropIntent = new Intent(getActivity(), CropActivity.class);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
 
+            BitmapHolder.mBitmap = RotateBitmap(bitmap, 90);
+            startActivity(cropIntent);
+
+//            String filename = "syllabus.png";
+//            File sd = Environment.getExternalStorageDirectory();
+//            File dest = new File(sd, filename);
+//
+//            try {
+//                FileOutputStream out = new FileOutputStream(dest);
+//                bitmap.compress(Bitmap.CompressFormat.PNG, 90, out);
+//                out.flush();
+//                out.close();
+//
+//                startActivity(cropIntent);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+        }
     };
+
+    public static Bitmap RotateBitmap(Bitmap source, float angle)
+    {
+        Matrix matrix = new Matrix();
+        matrix.postRotate(angle);
+        return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(), matrix, true);
+    }
+
 
     /**
      * {@link CaptureRequest.Builder} for the camera preview
