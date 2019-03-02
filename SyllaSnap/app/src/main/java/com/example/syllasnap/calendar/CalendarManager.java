@@ -57,33 +57,33 @@ public class CalendarManager {
         return calendar;
     }
 
-    public boolean calendarPermission(String calendarId) {
-
-
-        if (mCalendar != null) {
-            boolean permission = false;
-            String pageToken = null;
-
-            try {
-                do {
-                    CalendarList calendarList = mCalendar.calendarList().list().setPageToken(pageToken).execute();
-                    List<CalendarListEntry> items = calendarList.getItems();
-
-                    for (CalendarListEntry calendarListEntry : items) {
-                        if (calendarListEntry.getSummary().equals(calendarId)) {
-                            permission = true;
-                        }
-                    }
-                } while (pageToken != null && permission == false);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return permission;
-        } else {
-            return false;
-        }
-    }
+//    public boolean calendarPermission(String calendarId) {
+//
+//
+//        if (mCalendar != null) {
+//            boolean permission = false;
+//            String pageToken = null;
+//
+//            try {
+//                do {
+//                    CalendarList calendarList = mCalendar.calendarList().list().setPageToken(pageToken).execute();
+//                    List<CalendarListEntry> items = calendarList.getItems();
+//
+//                    for (CalendarListEntry calendarListEntry : items) {
+//                        if (calendarListEntry.getSummary().equals(calendarId)) {
+//                            permission = true;
+//                        }
+//                    }
+//                } while (pageToken != null && permission == false);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//
+//            return permission;
+//        } else {
+//            return false;
+//        }
+//    }
 
 
     public void uploadEventToCalendar(SyllabusEvent event) {
@@ -96,12 +96,10 @@ public class CalendarManager {
             boolean permission = true;
             // Iterate through entries to make sure person has access to calendar
 
-            if (permission) {
-                try {
+            try {
                     mCalendar.events().insert(calendarId, event.getCalendarEvent()).execute();
                 } catch (Exception e) {
                     Log.d("calendar upload", e.toString());
-                }
             }
 
         }
