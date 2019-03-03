@@ -1,5 +1,6 @@
 package com.example.syllasnap;
 
+import android.app.Activity;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,9 @@ import com.example.syllasnap.test_activities.AngelTestActivity;
 import com.example.syllasnap.test_activities.AnnaTestActivity;
 import com.example.syllasnap.test_activities.MaraTestActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
+
+    private WebView mWebview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setUpTestActivityButton(R.id.start_camera, new Intent(MainActivity.this, CameraActivity.class));
 
-        // startActivity(new Intent(MainActivity.this, AuthActivity.class));
+        //
+        mWebView = (WebView) findViewById(R.id.activity_main_webview);
     }
 
 
