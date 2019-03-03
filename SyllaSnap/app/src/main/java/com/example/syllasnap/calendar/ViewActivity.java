@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import com.example.syllasnap.MyAppWebViewClient;
+//import com.example.syllasnap.MyAppWebViewClient;
 import com.example.syllasnap.R;
 
 public class ViewActivity extends Activity {
