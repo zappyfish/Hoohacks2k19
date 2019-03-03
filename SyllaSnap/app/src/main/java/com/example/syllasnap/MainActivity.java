@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         setUpTestActivityButton(R.id.start_camera, new Intent(MainActivity.this, CameraActivity.class));
 
         // startActivity(new Intent(MainActivity.this, AuthActivity.class));
