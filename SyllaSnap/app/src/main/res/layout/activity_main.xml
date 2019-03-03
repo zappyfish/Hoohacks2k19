@@ -7,7 +7,7 @@
     android:background="@drawable/func_background"
     tools:context=".MainActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="0dp"
@@ -27,6 +27,7 @@
             android:text="" />
 
         <!--view your google calendar-->
+
         <Button
 
             android:id="@+id/button2"
@@ -35,6 +36,12 @@
             android:layout_weight="0.5"
             android:background="@android:color/transparent"
             android:text="" />
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5" />
 
 
         <!-- Include other widget or layout tags here. These are considered
