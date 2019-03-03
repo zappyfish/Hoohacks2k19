@@ -19,7 +19,7 @@
         <!--android:id="@+id/start_camera"-->
         <Button
 
-            android:id="@+id/button1"
+            android:id="@+id/start_camera"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
@@ -29,7 +29,7 @@
         <!--view your google calendar-->
         <Button
 
-            android:id="@+id/start_camera"
+            android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
