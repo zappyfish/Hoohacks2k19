@@ -4,59 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/syllasnap1"
+    android:background="@drawable/func_background"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select a Test Activity Here"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/anna"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="anna" />
-
-            <Button
-                android:id="@+id/angel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="angel" />
-
-            <Button
-                android:id="@+id/mara"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="mara" />
-        </LinearLayout>
-
+        <!--snap a picture button-->
+        <!--android:id="@+id/start_camera"-->
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+
             android:id="@+id/start_camera"
-            android:text="camera"/>
-        '
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/transparent"
+            android:text="" />
+
+        <!--view your google calendar-->
+        <Button
+
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/transparent"
+            android:text="" />
+
+
+        <!-- Include other widget or layout tags here. These are considered
+                "child views" or "children" of the linear layout -->
+
     </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--tools:layout_editor_absoluteX="62dp"-->
+        <!--tools:layout_editor_absoluteY="0dp">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Select a Test Activity Here"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/anna"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="anna" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/angel"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="angel" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/mara"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="mara" />-->
+        <!--</LinearLayout>-->
+
+        <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:id="@+id/start_camera"-->
+            <!--android:text="camera"/>-->
+        <!--'-->
+    <!--</LinearLayout>-->
 
 
 

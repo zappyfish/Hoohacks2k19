@@ -15,7 +15,7 @@ import android.view.View;
 
 public class InfoActivity extends AppCompatActivity {
 
-    private static final int READ_DELAY = 5000;
+    private static final int READ_DELAY = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

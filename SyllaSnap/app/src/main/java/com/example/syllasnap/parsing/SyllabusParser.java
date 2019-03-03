@@ -16,9 +16,15 @@ public class SyllabusParser {
     public SyllabusParser() {
 
     }
-
+  
     public List<SyllabusEvent> getSyllabusEvents(OCRResponse ocrResponse, String className) {
         List<SyllabusEvent> syllabusEvents = new ArrayList<>();
+      
+        // TODO: Complete me (Angel)
+        // Useful links:
+        // https://stackoverflow.com/questions/5270195/extracting-dates-from-text-in-java
+        // https://stackoverflow.com/questions/16434724/how-to-extract-date-and-from-a-string-in-java
+        // TODO: Look at example of creating event (delete this code later)
 
         for (int i = 0; i < ocrResponse.getNumData(); i++) {
             OCRData data = ocrResponse.getData(i);

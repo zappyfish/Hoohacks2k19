@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.syllasnap.HackyActivityGrabber;
 import com.example.syllasnap.data.SyllabusEvent;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;

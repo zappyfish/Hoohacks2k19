@@ -9,6 +9,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/syllasnap2"/>
+        android:src="@drawable/cover_background"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
