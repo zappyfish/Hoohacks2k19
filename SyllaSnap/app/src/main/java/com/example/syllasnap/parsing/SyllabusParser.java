@@ -166,13 +166,56 @@ public class SyllabusParser {
 
         Map<OCRData, List<DateGroup>> dataDateGroupMap = new HashMap<>();
 
+        List<DateGroup> allDates = new LinkedList<>();
+
         OCRData fullText = findFullText(ocrResponse);
 
         OCRResponse sortedResponse = resortData(ocrResponse, fullText);
 
-        List<DateGroup> dategroups = new Parser().parse(fullText.getText());
+        String searchText = "";
+        for (String line : fullText.getText().split("\n")) {
+            line = line.replace("-", " ").toLowerCase();
+            List<DateGroup> firstTry = new Parser().parse(line);
+            for (DateGroup dg : firstTry) {
+                String[] splt = dg.getText().split(" ");
+                if (splt.length > 1) {
+                    try {
+                        Integer.parseInt(splt[0]); // it's probably the day
+                        try {
+                            for (String token : splt) {
+                                Integer.parseInt(token);
+                            }
+                            // It's all numbers, so we're probably good to go
+                        } catch (Exception e) {
+                            // It has something like mar, jan, etc. b/c not all numbers
+                            String reOrdered = "";
+                            for (int i = 1; i < splt.length; i++) {
+                                reOrdered += splt[i] + " ";
+                            }
+                            reOrdered += splt[0];
+                            // Now try again
+                            List<DateGroup> secondTry = new Parser().parse(reOrdered);
+                            for (DateGroup secondTryDG : secondTry) {
+                                secondTryDG.setText(dg.getText()); // make sure the text matches
+                                allDates.add(secondTryDG);
+                            }
+                        }
+                    } catch (Exception e) {
+                        allDates.add(dg); // we're probably okay w/ current format
+                    }
+                } else {
+                   // TODO: should we add it here????
+                }
+                // add to allDates
+            }
+            searchText += line;
+        }
 
-        dategroups = refineDateGroups(dategroups);
+        searchText = searchText.trim();
+
+        // List<DateGroup> dategroups = new Parser().parse(fullText.getText());
+
+        List<DateGroup> dategroups = refineDateGroups(allDates);
 
 //        dataDateGroupMap.put(fullText, dategroups);
 //
@@ -196,14 +239,14 @@ public class SyllabusParser {
                 endDate.setHours(23);
                 endDate.setMinutes(59);
                 SyllabusDate end = new SyllabusDate(date);
-                int startPos = fullText.getText().indexOf(currentDG.getText()) + currentDG.getText().length();
-                int endPos = fullText.getText().length();
+                int startPos = searchText.indexOf(currentDG.getText()) + currentDG.getText().length();
+                int endPos = searchText.length();
                 if (++dateGroupInd < dategroups.size()) {
                     currentDG = dategroups.get(dateGroupInd);
-                    endPos = fullText.getText().indexOf(currentDG.getText(), startPos);
+                    endPos = searchText.indexOf(currentDG.getText(), startPos);
                 }
-                if (endPos >= 0 && endPos <= fullText.getText().length()) {
-                    String nextEvent = fullText.getText().substring(startPos, endPos).replace('\n', ' ');
+                if (endPos >= 0 && endPos <= searchText.length()) {
+                    String nextEvent = searchText.substring(startPos, endPos).replace('\n', ' ');
                     events.add(new SyllabusEvent(nextEvent, start, end));
                 }
             }
