@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/class_background"
-    tools:context=".test_activities.MaraTestActivity">
+    tools:context=".data.ClassActivity">
 
     <EditText
         android:layout_width="900px"
@@ -18,10 +18,10 @@
         android:layout_marginTop="700px"
         android:layout_marginLeft="50px"
         android:layout_gravity="center"
-        android:id="@+id/mara_test_event_name"/>
+        android:id="@+id/class_input_name"/>
 
     <Button
-        android:id="@+id/mara_test"
+        android:id="@+id/class_name"
         android:layout_width="150px"
         android:layout_height="150px"
         android:layout_marginTop="630px"
