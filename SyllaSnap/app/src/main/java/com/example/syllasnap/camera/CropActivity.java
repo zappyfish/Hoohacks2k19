@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +17,12 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 public class CropActivity extends AppCompatActivity {
 
     private CropImageView mCropView;
+    private OCRManager.OCRCallback callback = new OCRManager.OCRCallback() {
+        @Override
+        public void onOCRComplete(OCRResponse response) {
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +44,8 @@ public class CropActivity extends AppCompatActivity {
                 Bitmap cropped = mCropView.getCroppedImage();
                 // Send it up to to the cloud now for OCR.
                 try {
-                    OCRManager.getInstance().makeOCRRequest(cropped, CropActivity.this, new OCRManager.OCRCallback() {
-                        @Override
-                        public void onOCRComplete(OCRResponse response) {
-
-                        }
-                    });
+                    Toast.makeText(CropActivity.this, "Analyzing image...", Toast.LENGTH_SHORT).show();
+                    OCRManager.getInstance().makeOCRRequest(cropped, CropActivity.this, callback);
                 } catch (Exception e) {
                     Log.d("ocr", e.toString());
                 }
