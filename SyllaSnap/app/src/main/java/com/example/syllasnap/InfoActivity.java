@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.syllasnap.auth.AuthActivity;
+import com.example.syllasnap.test_activities.AngelTestActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -26,7 +27,7 @@ public class InfoActivity extends AppCompatActivity {
         Runnable authStarter = new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(InfoActivity.this, AuthActivity.class));
+                startActivity(new Intent(InfoActivity.this, AngelTestActivity.class));
             }
         };
 

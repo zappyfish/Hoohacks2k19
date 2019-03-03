@@ -47,7 +47,7 @@ public class AngelTestActivity extends AppCompatActivity {
                 int resource = examplesMap.get(choice.getText().toString());
                 OCRResponse response = createTestResponse(resource);
                 SyllabusParser parser = new SyllabusParser();
-                List<SyllabusEvent> events = parser.getSyllabusEvents(response);
+                List<SyllabusEvent> events = parser.getSyllabusEvents(response, "Class Name Here");
                 TextView viewResult = (TextView)findViewById(R.id.ex_result);
                 String result = "";
                 for (SyllabusEvent event: events) {
