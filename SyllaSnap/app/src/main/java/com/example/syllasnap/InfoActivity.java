@@ -27,7 +27,7 @@ public class InfoActivity extends AppCompatActivity {
         Runnable authStarter = new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(InfoActivity.this, AngelTestActivity.class));
+                startActivity(new Intent(InfoActivity.this, MainActivity.class));
             }
         };
 
