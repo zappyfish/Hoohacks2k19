@@ -40,7 +40,7 @@ import java.util.*;
 public class OCRManager {
 
     // TODO: REMOVE THIS! THIS IS TERRIBLE PRACTICE
-    private static final String API_KEY = "AIzaSyB6e44sijZP2uJAoMuf34KYIu6pTLoe_YY";
+    private static final String API_KEY = "NICE_TRY";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
     private static final String ANDROID_PACKAGE_HEADER = "X-Android-Package";
 
