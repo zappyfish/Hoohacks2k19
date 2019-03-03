@@ -173,14 +173,34 @@ public class OCRManager {
                             String text = annotation.getDescription();
                             List<Vertex> vertices = annotation.getBoundingPoly().getVertices();
                             if (vertices != null && vertices.size() == 4) {
+                                int left = -1, right = -1, top = -1, bottom = -1;
                                 try {
-                                    int left = vertices.get(0).getX();
-                                    int top = vertices.get(1).getY();
-                                    int right = vertices.get(2).getX();
-                                    int bottom = vertices.get(3).getY();
+                                    for (Vertex vertex : vertices) {
+                                        if (left == -1) {
+                                            left = vertex.getX();
+                                            right = left;
+                                            top = vertex.getY();
+                                            bottom = top;
+                                        } else {
+                                            if (vertex.getX() < left) {
+                                                left = vertex.getX();
+                                            }
+                                            if (vertex.getX() > right) {
+                                                right = vertex.getX();
+                                            }
+                                            if (vertex.getY() < top) {
+                                                top = vertex.getY();
+                                            }
+                                            if (vertex.getY() > bottom) {
+                                                bottom = vertex.getY();
+                                            }
+                                        }
+                                    }
 
                                     OCRData data = new OCRData(text, left, right, top, bottom);
-                                    requestResult.addData(data);
+                                    if (!exists(data, requestResult)) {
+                                        requestResult.addData(data);
+                                    }
                                 } catch (NullPointerException np) {
 
                                 }
@@ -191,6 +211,15 @@ public class OCRManager {
                 }
             }
         }
+    }
+
+    private static boolean exists(OCRData data, OCRResponse currentData) {
+        for (int i = 0; i < currentData.getNumData(); i++) {
+            if (data.getText().equals(currentData.getData(i).getText())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public interface OCRCallback {

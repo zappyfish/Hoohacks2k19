@@ -39,9 +39,9 @@ public class MaraTestActivity extends AppCompatActivity {
 
     private void makeTestRequest() {
         String name = ((TextView)findViewById(R.id.mara_test_event_name)).getText().toString();
-        SyllabusDate start = new SyllabusDate(2019, 03, 03, 0, 0);
-        SyllabusDate end = new SyllabusDate(2019, 03, 03, 23, 59);
-        SyllabusEvent testEvent = new SyllabusEvent(name, start, end);
+        // SyllabusDate start = new SyllabusDate(2019, 03, 03, 0, 0);
+        // SyllabusDate end = new SyllabusDate(2019, 03, 03, 23, 59);
+        SyllabusEvent testEvent = new SyllabusEvent(name, null, null);
         CalendarManager.getInstance().uploadEventToCalendar(testEvent, MaraTestActivity.this);
         Toast.makeText(MaraTestActivity.this, "Sent event upload request", Toast.LENGTH_SHORT).show();
     }

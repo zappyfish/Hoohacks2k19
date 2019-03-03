@@ -16,7 +16,7 @@ import android.view.View;
 
 public class InfoActivity extends AppCompatActivity {
 
-    private static final int READ_DELAY = 3000;
+    private static final int READ_DELAY = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class InfoActivity extends AppCompatActivity {
         Runnable authStarter = new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(InfoActivity.this, MainActivity.class));
+                startActivity(new Intent(InfoActivity.this, AuthActivity.class));
             }
         };
 

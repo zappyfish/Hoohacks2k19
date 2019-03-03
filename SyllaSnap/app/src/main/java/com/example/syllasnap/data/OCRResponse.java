@@ -22,4 +22,13 @@ public class OCRResponse {
     public int getNumData() {
         return mOCRDataList.size();
     }
+
+    public boolean contains(OCRData data) {
+        for (OCRData check : mOCRDataList) {
+            if (data == check) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

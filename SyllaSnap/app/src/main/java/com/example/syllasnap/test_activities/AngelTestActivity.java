@@ -65,8 +65,8 @@ public class AngelTestActivity extends AppCompatActivity {
             byte[] buffer = new byte[is.available()];
             while (is.read(buffer) != -1);
             int pos = 0;
-            String text = "";
             while (pos < buffer.length) {
+                String text = "";
                 pos++;
                 while (buffer[pos] != '\"') {
                     text += (char)buffer[pos++];
@@ -93,6 +93,6 @@ public class AngelTestActivity extends AppCompatActivity {
         for (String bnd : bnds) {
             intbnds[i++] = Integer.parseInt(bnd);
         }
-        return new OCRData(text, intbnds[0], intbnds[1], intbnds[2], intbnds[3]);
+        return new OCRData(text, intbnds[0], intbnds[2], intbnds[1], intbnds[3]);
     }
 }

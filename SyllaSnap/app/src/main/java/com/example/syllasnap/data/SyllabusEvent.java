@@ -15,7 +15,7 @@ public class SyllabusEvent {
     public SyllabusEvent(String name, SyllabusDate start, SyllabusDate end) {
         mCalendarEvent = createCalendarEvent(name, start.getEventDateTime(), end.getEventDateTime());
         mName = name;
-        mStart = start.toString();
+        mStart = start.getEventDateTime().getDateTime().toString();
     }
 
     // TODO: Complete me (Mara). Useful links below
@@ -38,6 +38,6 @@ public class SyllabusEvent {
     }
 
     public String getLine() {
-        return mName + " " + mStart;
+        return mName + " on " + mStart;
     }
 }
