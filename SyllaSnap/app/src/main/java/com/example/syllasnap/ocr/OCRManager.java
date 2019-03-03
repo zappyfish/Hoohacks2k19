@@ -165,23 +165,25 @@ public class OCRManager {
         protected void onPostExecute(BatchAnnotateImagesResponse response) {
             if (response != null) {
                 OCRResponse requestResult = new OCRResponse();
-                List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
+                List<EntityAnnotation> labels = response.getResponses().get(0).getTextAnnotations();
 
-                for (EntityAnnotation annotation : labels) {
-                    if (annotation.getDescription() != null) {
-                        String text = annotation.getDescription();
-                        List<Vertex> vertices = annotation.getBoundingPoly().getVertices();
+                if (labels != null) {
+                    for (EntityAnnotation annotation : labels) {
+                        if (annotation.getDescription() != null) {
+                            String text = annotation.getDescription();
+                            List<Vertex> vertices = annotation.getBoundingPoly().getVertices();
 
-                        int left = vertices.get(0).getX();
-                        int top = vertices.get(1).getY();
-                        int right = vertices.get(2).getX();
-                        int bottom = vertices.get(3).getY();
+                            int left = vertices.get(0).getX();
+                            int top = vertices.get(1).getY();
+                            int right = vertices.get(2).getX();
+                            int bottom = vertices.get(3).getY();
 
-                        OCRData data = new OCRData(text, left, right, top, bottom);
-                        requestResult.addData(data);
+                            OCRData data = new OCRData(text, left, right, top, bottom);
+                            requestResult.addData(data);
+                        }
                     }
+                    mOCRWeakCallback.get().onOCRComplete(requestResult);
                 }
-                mOCRWeakCallback.get().onOCRComplete(requestResult);
             }
         }
     }
