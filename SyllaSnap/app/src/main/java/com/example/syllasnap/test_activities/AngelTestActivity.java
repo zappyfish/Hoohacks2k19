@@ -38,27 +38,6 @@ public class AngelTestActivity extends AppCompatActivity {
 
     }
 
-<<<<<<< HEAD
-//    private void initTestButton(final Map<String, Integer> examplesMap) {
-//        Button button = (Button) findViewById(R.id.run_angle_test);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                EditText choice = (EditText) findViewById(R.id.ex_num);
-//                int resource = examplesMap.get(choice.getText().toString());
-//                OCRResponse response = createTestResponse(resource);
-//                SyllabusParser parser = new SyllabusParser();
-//                List<SyllabusEvent> events = parser.getSyllabusEvents(response);
-//                TextView viewResult = (TextView)findViewById(R.id.ex_result);
-//                String result = "";
-//                for (SyllabusEvent event: events) {
-//                    result += event.getLine() + "\n";
-//                }
-//                viewResult.setText(result);
-//            }
-//        });
-//    }
-=======
     private void initTestButton(final Map<String, Integer> examplesMap) {
         Button button = (Button) findViewById(R.id.run_angle_test);
         button.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +57,6 @@ public class AngelTestActivity extends AppCompatActivity {
             }
         });
     }
->>>>>>> de3df4fd9992ee5154b3808aee183e80c27e470c
 
     private OCRResponse createTestResponse(int id) {
         OCRResponse response = new OCRResponse();
