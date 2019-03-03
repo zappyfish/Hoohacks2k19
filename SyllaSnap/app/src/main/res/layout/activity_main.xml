@@ -10,19 +10,20 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
         android:orientation="vertical"
         android:gravity="center">
 
         <!--snap a picture button-->
+        <!--android:id="@+id/start_camera"-->
         <Button
 
-            android:id="@+id/start_camera"
+            android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight=".5"
-            android:background="@null"
+            android:background="@drawable/snap_button"
             android:text="" />
 
         <!--view your google calendar-->
@@ -32,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
-            android:background="@null"
+            android:background="@drawable/view_button"
             android:text="" />
 
 
@@ -41,56 +42,56 @@
 
     </LinearLayout>
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:gravity="center"-->
-        <!--android:orientation="vertical"-->
-        <!--tools:layout_editor_absoluteX="62dp"-->
-        <!--tools:layout_editor_absoluteY="0dp">-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="0dp">
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="Select a Test Activity Here"-->
-            <!--app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--app:layout_constraintLeft_toLeftOf="parent"-->
-            <!--app:layout_constraintRight_toRightOf="parent"-->
-            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a Test Activity Here"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:orientation="horizontal">-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-            <!--<Button-->
-                <!--android:id="@+id/anna"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="anna" />-->
+            <Button
+                android:id="@+id/anna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="anna" />
 
-            <!--<Button-->
-                <!--android:id="@+id/angel"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="angel" />-->
+            <Button
+                android:id="@+id/angel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="angel" />
 
-            <!--<Button-->
-                <!--android:id="@+id/mara"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="mara" />-->
-        <!--</LinearLayout>-->
+            <Button
+                android:id="@+id/mara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mara" />
+        </LinearLayout>
 
-        <!--<Button-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:id="@+id/start_camera"-->
-            <!--android:text="camera"/>-->
-        <!--'-->
-    <!--</LinearLayout>-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/start_camera"
+            android:text="camera"/>
+        '
+    </LinearLayout>
 
 
 
