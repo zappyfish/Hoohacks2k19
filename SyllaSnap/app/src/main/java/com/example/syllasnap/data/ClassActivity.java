@@ -29,18 +29,19 @@ public class ClassActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                makeTestRequest();
+                enterEventName();
             }
         });
     }
 
-    private void makeTestRequest() {
+    protected String enterEventName() {
         String name = ((TextView)findViewById(R.id.class_input_name)).getText().toString();
         // SyllabusDate start = new SyllabusDate(2019, 03, 03, 0, 0);
-        // SyllabusDate end = new SyllabusDate(2019, 03, 03, 23, 59);
-        SyllabusEvent testEvent = new SyllabusEvent(name, null, null);
-        CalendarManager.getInstance().uploadEventToCalendar(testEvent, ClassActivity.this);
-        Toast.makeText(ClassActivity.this, "Sent event upload request", Toast.LENGTH_SHORT).show();
+//        // SyllabusDate end = new SyllabusDate(2019, 03, 03, 23, 59);
+//        SyllabusEvent testEvent = new SyllabusEvent(name, null, null);
+//        CalendarManager.getInstance().uploadEventToCalendar(testEvent, ClassActivity.this);
+//        Toast.makeText(ClassActivity.this, "Sent event upload request", Toast.LENGTH_SHORT).show();
+        return name;
     }
 
     @Override
@@ -49,7 +50,7 @@ public class ClassActivity extends AppCompatActivity {
         if (requestCode == REQUEST_AUTHORIZATION) {
             // Make sure the request was successful
             if (resultCode == RESULT_OK) {
-                makeTestRequest();
+                enterEventName();
             }
         }
     }
