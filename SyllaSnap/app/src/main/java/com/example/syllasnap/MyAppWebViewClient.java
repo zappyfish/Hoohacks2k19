@@ -1,9 +1,15 @@
-package com.example.syllasnap
+package com.example.syllasnap;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
 public class MyAppWebViewClient extends WebViewClient {
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        if(Uri.parse(url).getHost().endsWith("html5rocks.com")) {
+        if (Uri.parse(url).getHost().endsWith("html5rocks.com")) {
             return false;
         }
 
@@ -11,3 +17,4 @@ public class MyAppWebViewClient extends WebViewClient {
         view.getContext().startActivity(intent);
         return true;
     }
+}

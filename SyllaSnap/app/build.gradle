@@ -42,6 +42,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation 'com.google.http-client:google-http-client-gson:1.22.0'
     implementation 'com.joestelmach:natty:0.6'
+    implementation 'com.jjoe64:graphview:4.2.2'
     api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'

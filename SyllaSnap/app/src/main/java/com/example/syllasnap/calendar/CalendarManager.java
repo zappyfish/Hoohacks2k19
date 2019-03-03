@@ -11,10 +11,19 @@ import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecovera
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.client.util.DateTime;
 import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.model.Event;
+import com.google.api.services.calendar.model.EventDateTime;
+import com.google.api.services.calendar.model.Events;
+
+import java.io.IOException;
+import java.util.Date;
+import java.util.List;
 
 public class CalendarManager {
+
+    private static final long MS_PER_WEEK = 600000000;
 
     private static final int REQUEST_AUTHORIZATION = 8;
 
@@ -118,6 +127,15 @@ public class CalendarManager {
         private CalendarRequest() {}
     }
 
+    public void requestWeekData(WeekDataCallback callback) {
+        WeekData data = new WeekData();
+        data.callback = callback;
+        data.calendar = mCalendar;
+
+        WeekDataTask task = new WeekDataTask();
+        task.execute(data);
+    }
+
     private static class CalendarTask extends AsyncTask<CalendarRequest, Void, Void> {
         @Override
         protected Void doInBackground(CalendarRequest... params) {
@@ -132,6 +150,47 @@ public class CalendarManager {
             }
             return null;
         }
-
     }
+
+    private static class WeekData {
+        private Calendar calendar;
+        private WeekDataCallback callback;
+    }
+
+    private static class WeekDataTask extends AsyncTask<WeekData, Void, Void> {
+        @Override
+        protected Void doInBackground(WeekData... params) {
+            WeekData data = params[0];
+            try {
+                Events events = data.calendar.events().list("primary").setPageToken(null).execute();
+                List<Event> items = events.getItems();
+                int[] eventsPerDay = new int[7];
+                for (int i = 0; i < 7; i++) {
+                    eventsPerDay[i] = 0;
+                }
+                Date todayDate = new Date();
+                DateTime today = new DateTime(todayDate);
+                for (Event event : items) {
+                    EventDateTime start = event.getStart();
+                    DateTime dTime = start.getDateTime();
+                    long diffMs = dTime.getValue() - today.getValue();
+                    if (diffMs < MS_PER_WEEK && diffMs > 0) {
+                        long msPerDay = MS_PER_WEEK / 7;
+                        int day = (int)(diffMs / msPerDay);
+                        eventsPerDay[day]++;
+                    }
+                }
+                data.callback.onWeekData(eventsPerDay);
+            } catch (IOException e) {
+                // nada
+            }
+            return null;
+        }
+    }
+
+    public interface WeekDataCallback {
+
+        void onWeekData(int[] weekData);
+    }
+
 }
