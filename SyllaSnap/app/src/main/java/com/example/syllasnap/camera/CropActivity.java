@@ -1,22 +1,17 @@
 package com.example.syllasnap.camera;
 
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.syllasnap.HackyActivityGrabber;
 import com.example.syllasnap.R;
 import com.example.syllasnap.data.OCRResponse;
 import com.example.syllasnap.ocr.OCRManager;
 import com.theartofdev.edmodo.cropper.CropImageView;
-
-import java.io.ByteArrayOutputStream;
 
 public class CropActivity extends AppCompatActivity {
 
@@ -26,8 +21,6 @@ public class CropActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crop);
-
-        HackyActivityGrabber.currentActivity = this;
 
         mCropView = (CropImageView)findViewById(R.id.cropImageView);
         mCropView.setImageBitmap(BitmapHolder.mBitmap);
