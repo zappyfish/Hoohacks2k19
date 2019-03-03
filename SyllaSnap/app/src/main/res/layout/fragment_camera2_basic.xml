@@ -36,8 +36,10 @@
             android:id="@+id/picture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="200px"
+            android:background="@android:color/transparent"
             android:layout_gravity="center"
-            android:text="@string/picture" />
+            android:text="" />
 
         <ImageButton
             android:id="@+id/info"
