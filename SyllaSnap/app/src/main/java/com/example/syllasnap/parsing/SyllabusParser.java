@@ -60,15 +60,15 @@ public class SyllabusParser {
         months.add("December");
 
         ArrayList<Integer> days = new ArrayList<Integer>();
-        days.add(01);
-        days.add(02);
-        days.add(03);
-        days.add(04);
-        days.add(05);
-        days.add(06);
-        days.add(07);
-        days.add(08);
-        days.add(09);
+        days.add(1);
+        days.add(2);
+        days.add(3);
+        days.add(4);
+        days.add(5);
+        days.add(6);
+        days.add(7);
+        days.add(8);
+        days.add(9);
         days.add(10);
         days.add(11);
         days.add(12);
